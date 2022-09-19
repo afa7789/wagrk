@@ -4,7 +4,7 @@ export const avalancheChain: Chain = {
     id: 43_114,
     name: "Avalanche",
     network:"avalanche",
-    iconUrl: 'https://example.com/icon.svg',
+    iconUrl: 'https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=023',
     iconBackground: '#fff',
     nativeCurrency: {
       decimals: 18,
@@ -25,7 +25,7 @@ export const fujiChain: Chain = {
     id: 43_113,
     name: "Fuji",
     network: "fuji",
-    iconUrl: 'https://example.com/icon.svg',
+    iconUrl: 'https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=023',
     iconBackground: '#fff',
     nativeCurrency: {
         decimals: 18,

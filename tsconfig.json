@@ -1,0 +1,17 @@
+{
+    "include": [
+        "./src/**/*"
+    ],
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "strict": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "jsx": "react-jsx",
+    },
+    "exclude": ["node_modules"]
+}

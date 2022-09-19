@@ -1,6 +1,3 @@
-// Components imports
-import { ConnectBtn } from './Components/ConnectBtn/ConnectBtn';
-
 // Rainbowkit imports
 import {
   connectorsForWallets, 
@@ -15,6 +12,8 @@ import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 // Custom imports
 import { custom_chains } from './Config/CustomChains.tsx';
+import { CustomAvatar } from './Components/Web3/CustomAvatar.tsx'
+import { Default } from './Container/Default/Default.tsx';
 
 // Wagmi config for custom chains
 const { provider, chains, webSocketProvider } = configureChains(
@@ -66,10 +65,8 @@ function App() {
 
   return (
     <WagmiConfig client={client}>
-      <RainbowKitProvider chains={chains} initialChain={43114}>
-        <div className="App">
-          <ConnectBtn/>
-        </div>
+      <RainbowKitProvider avatar={CustomAvatar} chains={chains} initialChain={43114}>
+        <Default/>
       </RainbowKitProvider> 
     </WagmiConfig>
   );
