@@ -11,9 +11,9 @@ import { configureChains, createClient, createStorage, WagmiConfig } from 'wagmi
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 // Custom imports
-import { custom_chains } from './Config/CustomChains.tsx';
-import { CustomAvatar } from './Components/Web3/CustomAvatar.tsx'
-import { Default } from './Container/Default/Default.tsx';
+import { custom_chains } from './Config/CustomChains';
+import { CustomAvatar } from './Components/Web3/CustomAvatar'
+import { Default } from './Container/Default/Default';
 
 // Wagmi config for custom chains
 const { provider, chains, webSocketProvider } = configureChains(
@@ -42,7 +42,10 @@ const connectors = connectorsForWallets([
   {
     groupName: 'Others',
     wallets: [
-      wallet.coinbase({ chains }),
+      wallet.coinbase({
+        appName: "",
+        chains
+      }),
       wallet.rainbow({ chains }),
       wallet.ledger({ chains }),
       wallet.omni({ chains })
@@ -51,7 +54,6 @@ const connectors = connectorsForWallets([
 ])
 
 // Wagmi client
-
 const client = createClient({
   connectors,
   provider,
@@ -59,7 +61,6 @@ const client = createClient({
   storage: createStorage({ storage: window.localStorage }),
   webSocketProvider
 })
-
 
 function App() {
 
