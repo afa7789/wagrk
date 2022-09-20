@@ -8,7 +8,7 @@ export const CustomAvatar: AvatarComponent = ({ address, ensImage, size }) => {
         src={ensImage}
         width={size}
         height={size}
-        style={{ borderRadius: 999 }}
+        style={{ borderRadius: 2 }}
       />
     ) : (
       <div>
@@ -16,7 +16,7 @@ export const CustomAvatar: AvatarComponent = ({ address, ensImage, size }) => {
             src={image}
             width={size}
             height={size}
-            style={{ borderRadius: 999 }}
+            style={{ borderRadius: 2 }}
         />
       </div>
     );
