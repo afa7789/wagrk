@@ -1,8 +1,8 @@
 import {AvatarComponent} from '@rainbow-me/rainbowkit';
-import makeGradient from 'ethereum-gradient-base64';
+import {makeGradientStatic} from 'ethereum-gradient-base64';
  
 export const CustomAvatar: AvatarComponent = ({ address, ensImage, size }) => {
-    const image = makeGradient(address);
+    const image = makeGradientStatic(address);
     return ensImage ? (
       <img
         src={ensImage}
