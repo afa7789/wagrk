@@ -4,7 +4,7 @@ specifiers:
   '@rainbow-me/rainbowkit': ^0.6.0
   '@types/react': 17.0.20
   '@types/react-dom': ^18.0.6
-  ethereum-gradient-base64: 1.1.9
+  ethereum-gradient-base64: 1.2.0
   ethers: 5.7.0
   react: 18.2.0
   react-dom: ^18.2.0
@@ -14,7 +14,7 @@ specifiers:
 
 dependencies:
   '@rainbow-me/rainbowkit': 0.6.0_g5ooppljjuitcancp6753wqkxq
-  ethereum-gradient-base64: 1.1.9
+  ethereum-gradient-base64: 1.2.0
   ethers: 5.7.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -5855,8 +5855,8 @@ packages:
       setimmediate: 1.0.5
     dev: false
 
-  /ethereum-gradient-base64/1.1.9:
-    resolution: {integrity: sha512-+Uxojj9E79SfK9DnxphD+m3yWVqn/D+HYUY39/GH6ZefdPh72XmlYMYMdX9pUttw9FDp1N1355xIKPs0DN50AQ==}
+  /ethereum-gradient-base64/1.2.0:
+    resolution: {integrity: sha512-8pKh1h0smlPHlMKVmKlO8HWx77jb4d7XAeNOCVAUifRoRwmrs+7nwBFmoV1ghuLYOds2vfn4kANbeXp3/7jD4A==}
     dependencies:
       pnglib: 0.0.1
     dev: false
