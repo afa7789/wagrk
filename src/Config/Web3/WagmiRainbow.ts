@@ -6,7 +6,8 @@ import {
 
 // Wagmi imports 
 import { configureChains, createClient, createStorage, WagmiConfig } from 'wagmi';
-import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
+
 
 // Custom imports
 import { custom_chains } from './CustomChains';
@@ -14,14 +15,13 @@ import { custom_chains } from './CustomChains';
 // Wagmi config for custom chains
 const { provider, chains, webSocketProvider } = configureChains(
   custom_chains,
-  [
-    jsonRpcProvider({
-      rpc: (chain) => {
-        if (chain.id !== custom_chains[0].id && chain.id !== custom_chains[1].id) return null
-        return { http: chain.rpcUrls.default }
-      },
-    })
-  ],
+    [
+      jsonRpcProvider({
+        rpc: (chain) => ({
+          http: chain.rpcUrls.default.http[0]
+        }),
+      }),
+    ],
 )
 
 // Rainbowkit connectors list

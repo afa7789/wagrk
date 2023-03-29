@@ -1,4 +1,5 @@
 import { Chain } from "@rainbow-me/rainbowkit";
+import { mainnet, polygon } from 'wagmi/chains';
 
 export const avalancheChain: Chain = {
     id: 43_114,
@@ -12,7 +13,12 @@ export const avalancheChain: Chain = {
       symbol: "AVAX",
     },
     rpcUrls: {
-      default: "https://api.avax.network/ext/bc/C/rpc",
+      default: {
+        http: ['https://api.avax.network/ext/bc/C/rpc'],
+      },
+      public:{
+        http: ['https://api.avax.network/ext/bc/C/rpc'],
+      }
     },
     blockExplorers: {
       default: { name: "SnowTrace", url: "https://snowtrace.io" },
@@ -33,7 +39,12 @@ export const fujiChain: Chain = {
         name: "Avalanche"
     },
     rpcUrls: {
-        default: "https://api.avax-test.network/ext/bc/C/rpc"
+      default: {
+        http: ['https://api.avax-test.network/ext/bc/C/rpc'],
+      },
+      public:{
+        http: ['https://api.avax-test.network/ext/bc/C/rpc'],
+      }
     },
     blockExplorers: {
         default: { name: 'SnowTrace', url: 'https://testnet.snowtrace.io/' },
@@ -41,4 +52,6 @@ export const fujiChain: Chain = {
     testnet:true
 }
 
-export const custom_chains = [avalancheChain, fujiChain];
+export const custom_chains_manual = [avalancheChain, fujiChain];
+
+export const custom_chains = [ mainnet, polygon ];
